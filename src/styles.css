@@ -1,0 +1,60 @@
+:root{--roxo:#4a1a6b;--roxo2:#6b2d94;--claro:#f5eefb;--verde:#2e9e5b;--verm:#d0383f;--cinza:#6b6475;--borda:#e2d6ee}
+*{box-sizing:border-box}
+body{margin:0;font-family:system-ui,Segoe UI,Arial,sans-serif;background:#faf6fd;color:#2a1f33}
+header{background:linear-gradient(90deg,var(--roxo),var(--roxo2));color:#fff;padding:12px 20px;display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+header h1{margin:0;font-size:22px}
+nav{display:flex;gap:6px;flex-wrap:wrap;margin-left:auto}
+nav button{background:rgba(255,255,255,.15);color:#fff;border:0;padding:10px 16px;border-radius:8px;font-size:15px;cursor:pointer}
+nav button.on{background:#fff;color:var(--roxo);font-weight:700}
+main{padding:16px;max-width:1200px;margin:auto}
+main>section{display:none}main>section.on{display:block}
+.card{background:#fff;border:1px solid var(--borda);border-radius:12px;padding:16px;margin-bottom:16px}
+.grid{display:grid;grid-template-columns:1.2fr 1fr;gap:16px}
+@media(max-width:900px){.grid{grid-template-columns:1fr}}
+h2{margin:0 0 10px;font-size:18px;color:var(--roxo)}
+button,.btn{cursor:pointer;border:0;border-radius:8px;padding:10px 14px;font-size:15px;background:var(--roxo2);color:#fff}
+button.sec{background:var(--claro);color:var(--roxo);border:1px solid var(--borda)}
+button.ok{background:var(--verde)}button.bad{background:var(--verm)}
+button:disabled{opacity:.5;cursor:not-allowed}
+input,select{padding:9px;border:1px solid var(--borda);border-radius:8px;font-size:15px;width:100%}
+label{font-size:13px;color:var(--cinza);display:block;margin-bottom:3px}
+.row{display:flex;gap:10px;align-items:flex-end;flex-wrap:wrap}.row>*{flex:1;min-width:110px}
+.peso{font-size:54px;font-weight:800;color:var(--roxo);text-align:center;line-height:1}
+.peso small{font-size:22px;color:var(--cinza)}
+.valor{font-size:34px;font-weight:800;color:var(--verde);text-align:center}
+.status{font-size:13px;text-align:center;margin:6px 0}
+.prods{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px}
+.prods button{background:var(--claro);color:var(--roxo);border:1px solid var(--borda);padding:12px 6px}
+.prods button b{display:block;color:var(--verde)}
+table{width:100%;border-collapse:collapse}
+th,td{padding:8px 6px;border-bottom:1px solid var(--borda);text-align:left;font-size:15px}
+th{color:var(--cinza);font-size:13px}
+td.r,th.r{text-align:right}
+.total{font-size:30px;font-weight:800;text-align:right;color:var(--roxo)}
+.pay{display:flex;gap:8px;margin:10px 0}.pay button{flex:1;background:var(--claro);color:var(--roxo);border:2px solid var(--borda)}
+.pay button.on{background:var(--roxo2);color:#fff;border-color:var(--roxo2)}
+.low{color:var(--verm);font-weight:700}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.6);display:none;align-items:center;justify-content:center;padding:16px;z-index:9}
+.modal.on{display:flex}
+.modal .box{background:#fff;border-radius:12px;padding:16px;max-width:760px;max-height:92vh;overflow:auto;width:100%}
+.report-img{max-width:100%;border:1px solid var(--borda);border-radius:8px}
+.hint{font-size:13px;color:var(--cinza)}
+.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#2a1f33;color:#fff;padding:12px 18px;border-radius:10px;font-size:16px;white-space:pre-line;z-index:20;max-width:90vw;text-align:center}
+.x{background:none;color:var(--verm);padding:4px 8px;font-size:18px}
+
+.badge{background:rgba(255,255,255,.18);padding:4px 10px;border-radius:999px;font-size:13px}
+.logout{position:fixed;right:12px;bottom:12px;z-index:5;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:16px}
+.login .card{width:100%;max-width:360px}
+.login h1{font-size:22px;color:var(--roxo);margin:0 0 16px}
+a.btn{display:inline-block;padding:10px 14px;border-radius:8px;color:#fff}
+.btn.sec{background:var(--claro);color:var(--roxo);border:1px solid var(--borda)}
+
+.btn.ok{background:var(--verde)}
+
+.cancelled td{opacity:.55;text-decoration:line-through}
+.cancelled td:last-child{text-decoration:none;opacity:1}
+.good{color:var(--verde);font-weight:700}
+.bad-t{color:var(--verm);font-weight:700}
+.res td{font-size:17px}
+.res tr.big td{font-size:20px;font-weight:800;border-top:2px solid var(--roxo2)}
